@@ -72,12 +72,12 @@ function circle() {
       I'm spinning and yellow
     </li>
     <li>
-      <span class="cat" :class="sadCat.isClass('wobbly') ? 'wobbly' : ''" :style="[sadCat.isColor ? backgroundColor('blue') : '', circle()]">😿</span>
+      <span class="cat" :class="sadCat.isClass('wobbly') ? 'wobbly' : ''" :style="[sadCat.isColor('blue') ? backgroundColor('blue') : '', circle()]">😿</span>
       I'm wobbly and blue
     </li>
   </ol>
 </template>
-
+<!-- :style="[backgroundColor(cheekyCat.color) , circle()]" -->
 <style scoped>
 /* dont change these classes either :) */
 li {
