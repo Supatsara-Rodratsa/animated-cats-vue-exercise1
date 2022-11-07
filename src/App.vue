@@ -48,7 +48,7 @@ const sadCat = {
 // (please reason your answer)
 
 function backgroundColor(color) {
-  return `background-color: ${color}`
+  return `background-color: ${color}`;
 }
 
 function circle() {
@@ -77,7 +77,7 @@ function circle() {
     </li>
   </ol>
 </template>
-<!-- :style="[backgroundColor(cheekyCat.color) , circle()]" -->
+
 <style scoped>
 /* dont change these classes either :) */
 li {
