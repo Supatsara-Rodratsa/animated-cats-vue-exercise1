@@ -46,24 +46,33 @@ const sadCat = {
 // border-radius: 50%;
 // to ALL cats?
 // (please reason your answer)
+
+function backgroundColor(color) {
+  return `background-color: ${color}`
+}
+
+function circle() {
+  return 'border-radius: 50%';
+}
+
 </script>
 
 <template>
   <ol>
     <li>
-      <div class="cat">😺</div>
+      <div class="cat" :class="happyCat.class" :style="[circle(), happyCat.style]">😺</div>
       I'm joyful and red
     </li>
     <li>
-      <span class="cat">😼</span>
+      <span class="cat" :class="cheekyCat.anim.twisty ? 'twisty' : ''" :style="[backgroundColor(cheekyCat.color) , circle()]">😼</span>
       I'm twisty and green
     </li>
     <li>
-      <span class="cat">😹</span>
+      <span class="cat" :class="lolCat.isSpinning ? 'spinning' : ''" :style="[backgroundColor(lolCat.getColor()), circle()]">😹</span>
       I'm spinning and yellow
     </li>
     <li>
-      <span class="cat">😿</span>
+      <span class="cat" :class="sadCat.isClass('wobbly') ? 'wobbly' : ''" :style="[sadCat.isColor ? backgroundColor('blue') : '', circle()]">😿</span>
       I'm wobbly and blue
     </li>
   </ol>
